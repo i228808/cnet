@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <!-- Global configuration -->
+    <interface hosts="**" address="10.x.x.x" netmask="255.0.0.0"/>
+    
+    <!-- Head Office configuration -->
+    <interface hosts="headOffice.dnsServer" address="10.0.1.1" netmask="255.255.255.0"/>
+    <interface hosts="headOffice.dhcpServer" address="10.0.1.2" netmask="255.255.255.0"/>
+    <interface hosts="headOffice.firewallServer" address="10.0.1.3" netmask="255.255.255.0"/>
+    <interface hosts="headOffice.edgeServer*" address="10.0.1.x" netmask="255.255.255.0"/>
+    
+    <!-- Islamabad Campus -->
+    <interface hosts="islamabadCampus.edgeServer" address="10.1.0.1" netmask="255.255.0.0"/>
+    <interface hosts="islamabadCampus.lab[*].system[*]" address="10.1.x.x" netmask="255.255.0.0"/>
+    
+    <!-- Karachi Campus -->
+    <interface hosts="karachiCampus.edgeServer" address="10.2.0.1" netmask="255.255.0.0"/>
+    <interface hosts="karachiCampus.lab[*].system[*]" address="10.2.x.x" netmask="255.255.0.0"/>
+    
+    <!-- Lahore Campus -->
+    <interface hosts="lahoreCampus.edgeServer" address="10.3.0.1" netmask="255.255.0.0"/>
+    <interface hosts="lahoreCampus.lab[*].system[*]" address="10.3.x.x" netmask="255.255.0.0"/>
+    
+    <!-- Faisalabad Campus -->
+    <interface hosts="faisalabadCampus.edgeServer" address="10.4.0.1" netmask="255.255.0.0"/>
+    <interface hosts="faisalabadCampus.lab[*].system[*]" address="10.4.x.x" netmask="255.255.0.0"/>
+    
+    <!-- Peshawar Campus -->
+    <interface hosts="peshawarCampus.edgeServer" address="10.5.0.1" netmask="255.255.0.0"/>
+    <interface hosts="peshawarCampus.lab[*].system[*]" address="10.5.x.x" netmask="255.255.0.0"/>
+    
+    <!-- Multan Campus -->
+    <interface hosts="multanCampus.edgeServer" address="10.6.0.1" netmask="255.255.0.0"/>
+    <interface hosts="multanCampus.lab[*].system[*]" address="10.6.x.x" netmask="255.255.0.0"/>
+    
+    <!-- Routing configuration -->
+    <route hosts="**.system[*]" destination="10.0.1.1" netmask="255.255.255.255" gateway="*" interface="eth0"/>
+    <route hosts="**.system[*]" destination="10.0.1.2" netmask="255.255.255.255" gateway="*" interface="eth0"/>
+    <route hosts="**.system[*]" destination="10.0.1.3" netmask="255.255.255.255" gateway="*" interface="eth0"/>
+</config> 

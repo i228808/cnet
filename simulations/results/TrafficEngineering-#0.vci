@@ -1,0 +1,568 @@
+file 24019 1748803752                                           
+version 3
+run TrafficEngineering-0-20250601-23:49:04-10180
+attr configname TrafficEngineering
+attr datetime 20250601-23:49:04
+attr datetimef 20250601-234904
+attr experiment TrafficEngineering
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network cnetfinal.NUCESNetwork
+attr processid 10180
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "Traffic Engineering Test Configuration"
+config network cnetfinal.NUCESNetwork
+config sim-time-limit 1h
+config cpu-time-limit 300s
+config total-stack 7MiB
+config debug-on-errors true
+config print-undisposed true
+config **.scalar-recording true
+config **.vector-recording true
+config **.configurator.configFile "\"ipconfig.xml\""
+config **.centralController.flowTableSize 10000
+config **.centralController.processingDelay 0.5ms
+config **.*.localController.flowTableSize 5000
+config **.*.localController.processingDelay 1ms
+config **.*.localController.updateInterval 5s
+config **.*.**.OpenFlowSwitch.flowTableCapacity 100
+config **.*.coreSwitch*.flowTableCapacity 1000
+config **.islamabadCampus.numLabs 10
+config **.islamabadCampus.systemsPerLab 40
+config **.karachiCampus.numLabs 10
+config **.karachiCampus.systemsPerLab 40
+config **.lahoreCampus.numLabs 10
+config **.lahoreCampus.systemsPerLab 40
+config **.faisalabadCampus.numLabs 5
+config **.faisalabadCampus.systemsPerLab 30
+config **.peshawarCampus.numLabs 5
+config **.peshawarCampus.systemsPerLab 30
+config **.multanCampus.numLabs 5
+config **.multanCampus.systemsPerLab 30
+
+vector 0 NUCESNetwork.centralController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 1 NUCESNetwork.centralController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 2 NUCESNetwork.headOffice.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 3 NUCESNetwork.headOffice.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 4 NUCESNetwork.headOffice.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 5 NUCESNetwork.headOffice.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 6 NUCESNetwork.headOffice.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 7 NUCESNetwork.headOffice.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 8 NUCESNetwork.headOffice.controllerSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 9 NUCESNetwork.headOffice.controllerSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 10 NUCESNetwork.islamabadCampus.localController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 11 NUCESNetwork.islamabadCampus.localController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 12 NUCESNetwork.islamabadCampus.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 13 NUCESNetwork.islamabadCampus.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 14 NUCESNetwork.islamabadCampus.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 15 NUCESNetwork.islamabadCampus.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 16 NUCESNetwork.islamabadCampus.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 17 NUCESNetwork.islamabadCampus.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 18 NUCESNetwork.islamabadCampus.lab[0].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 19 NUCESNetwork.islamabadCampus.lab[0].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 20 NUCESNetwork.islamabadCampus.lab[1].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 21 NUCESNetwork.islamabadCampus.lab[1].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 22 NUCESNetwork.islamabadCampus.lab[2].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 23 NUCESNetwork.islamabadCampus.lab[2].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 24 NUCESNetwork.islamabadCampus.lab[3].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 25 NUCESNetwork.islamabadCampus.lab[3].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 26 NUCESNetwork.islamabadCampus.lab[4].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 27 NUCESNetwork.islamabadCampus.lab[4].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 28 NUCESNetwork.islamabadCampus.lab[5].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 29 NUCESNetwork.islamabadCampus.lab[5].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 30 NUCESNetwork.islamabadCampus.lab[6].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 31 NUCESNetwork.islamabadCampus.lab[6].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 32 NUCESNetwork.islamabadCampus.lab[7].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 33 NUCESNetwork.islamabadCampus.lab[7].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 34 NUCESNetwork.islamabadCampus.lab[8].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 35 NUCESNetwork.islamabadCampus.lab[8].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 36 NUCESNetwork.islamabadCampus.lab[9].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 37 NUCESNetwork.islamabadCampus.lab[9].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 38 NUCESNetwork.karachiCampus.localController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 39 NUCESNetwork.karachiCampus.localController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 40 NUCESNetwork.karachiCampus.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 41 NUCESNetwork.karachiCampus.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 42 NUCESNetwork.karachiCampus.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 43 NUCESNetwork.karachiCampus.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 44 NUCESNetwork.karachiCampus.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 45 NUCESNetwork.karachiCampus.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 46 NUCESNetwork.karachiCampus.lab[0].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 47 NUCESNetwork.karachiCampus.lab[0].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 48 NUCESNetwork.karachiCampus.lab[1].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 49 NUCESNetwork.karachiCampus.lab[1].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 50 NUCESNetwork.karachiCampus.lab[2].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 51 NUCESNetwork.karachiCampus.lab[2].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 52 NUCESNetwork.karachiCampus.lab[3].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 53 NUCESNetwork.karachiCampus.lab[3].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 54 NUCESNetwork.karachiCampus.lab[4].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 55 NUCESNetwork.karachiCampus.lab[4].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 56 NUCESNetwork.karachiCampus.lab[5].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 57 NUCESNetwork.karachiCampus.lab[5].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 58 NUCESNetwork.karachiCampus.lab[6].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 59 NUCESNetwork.karachiCampus.lab[6].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 60 NUCESNetwork.karachiCampus.lab[7].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 61 NUCESNetwork.karachiCampus.lab[7].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 62 NUCESNetwork.karachiCampus.lab[8].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 63 NUCESNetwork.karachiCampus.lab[8].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 64 NUCESNetwork.karachiCampus.lab[9].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 65 NUCESNetwork.karachiCampus.lab[9].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 66 NUCESNetwork.lahoreCampus.localController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 67 NUCESNetwork.lahoreCampus.localController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 68 NUCESNetwork.lahoreCampus.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 69 NUCESNetwork.lahoreCampus.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 70 NUCESNetwork.lahoreCampus.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 71 NUCESNetwork.lahoreCampus.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 72 NUCESNetwork.lahoreCampus.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 73 NUCESNetwork.lahoreCampus.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 74 NUCESNetwork.lahoreCampus.lab[0].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 75 NUCESNetwork.lahoreCampus.lab[0].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 76 NUCESNetwork.lahoreCampus.lab[1].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 77 NUCESNetwork.lahoreCampus.lab[1].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 78 NUCESNetwork.lahoreCampus.lab[2].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 79 NUCESNetwork.lahoreCampus.lab[2].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 80 NUCESNetwork.lahoreCampus.lab[3].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 81 NUCESNetwork.lahoreCampus.lab[3].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 82 NUCESNetwork.lahoreCampus.lab[4].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 83 NUCESNetwork.lahoreCampus.lab[4].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 84 NUCESNetwork.lahoreCampus.lab[5].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 85 NUCESNetwork.lahoreCampus.lab[5].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 86 NUCESNetwork.lahoreCampus.lab[6].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 87 NUCESNetwork.lahoreCampus.lab[6].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 88 NUCESNetwork.lahoreCampus.lab[7].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 89 NUCESNetwork.lahoreCampus.lab[7].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 90 NUCESNetwork.lahoreCampus.lab[8].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 91 NUCESNetwork.lahoreCampus.lab[8].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 92 NUCESNetwork.lahoreCampus.lab[9].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 93 NUCESNetwork.lahoreCampus.lab[9].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 94 NUCESNetwork.faisalabadCampus.localController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 95 NUCESNetwork.faisalabadCampus.localController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 96 NUCESNetwork.faisalabadCampus.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 97 NUCESNetwork.faisalabadCampus.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 98 NUCESNetwork.faisalabadCampus.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 99 NUCESNetwork.faisalabadCampus.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 100 NUCESNetwork.faisalabadCampus.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 101 NUCESNetwork.faisalabadCampus.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 102 NUCESNetwork.faisalabadCampus.lab[0].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 103 NUCESNetwork.faisalabadCampus.lab[0].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 104 NUCESNetwork.faisalabadCampus.lab[1].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 105 NUCESNetwork.faisalabadCampus.lab[1].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 106 NUCESNetwork.faisalabadCampus.lab[2].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 107 NUCESNetwork.faisalabadCampus.lab[2].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 108 NUCESNetwork.faisalabadCampus.lab[3].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 109 NUCESNetwork.faisalabadCampus.lab[3].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 110 NUCESNetwork.faisalabadCampus.lab[4].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 111 NUCESNetwork.faisalabadCampus.lab[4].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 112 NUCESNetwork.peshawarCampus.localController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 113 NUCESNetwork.peshawarCampus.localController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 114 NUCESNetwork.peshawarCampus.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 115 NUCESNetwork.peshawarCampus.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 116 NUCESNetwork.peshawarCampus.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 117 NUCESNetwork.peshawarCampus.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 118 NUCESNetwork.peshawarCampus.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 119 NUCESNetwork.peshawarCampus.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 120 NUCESNetwork.peshawarCampus.lab[0].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 121 NUCESNetwork.peshawarCampus.lab[0].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 122 NUCESNetwork.peshawarCampus.lab[1].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 123 NUCESNetwork.peshawarCampus.lab[1].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 124 NUCESNetwork.peshawarCampus.lab[2].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 125 NUCESNetwork.peshawarCampus.lab[2].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 126 NUCESNetwork.peshawarCampus.lab[3].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 127 NUCESNetwork.peshawarCampus.lab[3].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 128 NUCESNetwork.peshawarCampus.lab[4].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 129 NUCESNetwork.peshawarCampus.lab[4].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 130 NUCESNetwork.multanCampus.localController flowSetupTime:vector ETV
+attr recordingmode vector
+attr title "Flow setup time"
+attr unit s
+vector 131 NUCESNetwork.multanCampus.localController controllerLoad:vector ETV
+attr recordingmode vector
+attr title "Controller load"
+vector 132 NUCESNetwork.multanCampus.coreSwitch1 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 133 NUCESNetwork.multanCampus.coreSwitch1 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 134 NUCESNetwork.multanCampus.coreSwitch2 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 135 NUCESNetwork.multanCampus.coreSwitch2 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 136 NUCESNetwork.multanCampus.coreSwitch3 packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 137 NUCESNetwork.multanCampus.coreSwitch3 tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 138 NUCESNetwork.multanCampus.lab[0].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 139 NUCESNetwork.multanCampus.lab[0].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 140 NUCESNetwork.multanCampus.lab[1].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 141 NUCESNetwork.multanCampus.lab[1].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 142 NUCESNetwork.multanCampus.lab[2].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 143 NUCESNetwork.multanCampus.lab[2].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 144 NUCESNetwork.multanCampus.lab[3].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 145 NUCESNetwork.multanCampus.lab[3].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+vector 146 NUCESNetwork.multanCampus.lab[4].labSwitch packetProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Packet processing time"
+attr unit s
+vector 147 NUCESNetwork.multanCampus.lab[4].labSwitch tableHitRatio:vector ETV
+attr recordingmode vector
+attr title "Flow table hit ratio"
+

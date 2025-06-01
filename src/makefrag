@@ -1,0 +1,7 @@
+OBJS = \
+    $O/NetworkConfigurator.o \
+    $O/Host.o \
+    $O/SDNController.o \
+    $O/OpenFlowSwitch.o \
+    $O/FlowRule.o \
+    $O/register.o 

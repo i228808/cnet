@@ -1,0 +1,3 @@
+package cnetfinal;
+
+@license(LGPL);
