@@ -131,7 +131,7 @@ void Host::handleMessage(cMessage *msg)
             delete msg;
         } else { // ALLOW
             EV_INFO << "Firewall " << getFullPath() << ": ALLOWING and forwarding packet " << msg->getName() << endl;
-            send(msg, "gate"); 
+            send(msg, "gate$o"); 
         }
         return; // Firewall processing complete
     }
@@ -154,7 +154,7 @@ void Host::handleMessage(cMessage *msg)
 
         EV_INFO << getFullPath() << ": Sending test packet: " << pkt->getSourceIP() << ":" << pkt->getSourcePort()
                 << " -> " << pkt->getDestinationIP() << ":" << pkt->getDestinationPort() << " Proto: " << pkt->getProtocol() << endl;
-        send(pkt, "gate");
+        send(pkt, "gate$o");
 
         // Schedule next send
         scheduleAt(simTime() + exponential(5.0), sendTimer); // Send every 5s (example)
@@ -173,7 +173,7 @@ void Host::handleMessage(cMessage *msg)
         else pkt->setProtocol("DNS_RESPONSE");
         pkt->setByteLength(1000); // Simulate large video/IoT/DNS packet
         EV_INFO << getFullPath() << ": Sending application traffic: " << pkt->getProtocol() << endl;
-        send(pkt, "gate");
+        send(pkt, "gate$o");
         scheduleAt(simTime() + exponential(10.0), sendTimer); // Repeat every ~10s
         return;
     }
@@ -193,7 +193,7 @@ void Host::handleMessage(cMessage *msg)
                 replyPkt->setSourcePort(receivedPkt->getDestinationPort());
                 replyPkt->setDestinationPort(receivedPkt->getSourcePort());
                 replyPkt->setByteLength(20);
-                send(replyPkt, "gate");
+                send(replyPkt, "gate$o");
             }
         }
         delete receivedPkt; // Consume the packet

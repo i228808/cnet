@@ -1,8 +1,8 @@
 version 3
-run SmallNetworkTest-0-20250528-22:13:29-15184
+run SmallNetworkTest-0-20250602-03:22:47-3664
 attr configname SmallNetworkTest
-attr datetime 20250528-22:13:29
-attr datetimef 20250528-221329
+attr datetime 20250602-03:22:47
+attr datetimef 20250602-032247
 attr experiment SmallNetworkTest
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network cnetfinal.NUCESNetwork
-attr processid 15184
+attr processid 3664
 attr repetition 0
 attr replication #0
 attr resultdir results
