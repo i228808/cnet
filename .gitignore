@@ -1,0 +1,40 @@
+# OMNeT++ specific
+*.exe
+*.so
+*.dylib
+*.dll
+out/
+*.o
+*.obj
+
+# Generated files
+*_m.h
+*_m.cc
+
+# Build directories
+out/
+
+# IDE specific files
+.qtenvrc
+.settings/
+.vscode/
+
+# Makefiles generated during build
+Makefile.*
+
+# Results and logs
+simulations/results/
+*.sca
+*.vec
+*.vci
+*.anf
+
+# Backup files
+*~
+*.bak
+
+# Local configuration
+.oppbuildspec
+.nedexclusions
+.nedfolders
+.last-copts
